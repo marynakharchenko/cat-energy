@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <title>Cat-energy</title>
+</head>
+    <body>
+        <header class="page-header">
+            <a class="page-header__logo" href="#">
+                <img class="page-header__logo-img" src="http://placehold.it/150x100" alt="Cat-energy">
+            </a>
+
+            <nav class="main-nav">
+                <button class="main-nav__toggle" type="button"> </button>
+                <div class="main-nav__wrap">
+                    <ul class="main-nav__list site-list">
+                        <li class="site-list__item ">
+                            <a href="#">Главная</a>
+                        </li>
+                        <li class="site-list__item">
+                            <a href="#">Каталог продукции</a>
+                        </li>
+                        <li class="site-list__item site-list__item--active">
+                            <a href="#">Подбор программы</a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+        <main class="form-main">
+            <section class="form">
+                <h2 class="form__title">Подбор программы</h2>
+                <p class="form__descript">Заполните анкету и мы подберем  программу питания для вашего ко</p>
+                <form class="form__fields">
+                    <div class="form__info">
+                        <label for="name-field">Имя:*</label>
+                        <input type="text" name="name" class="form__field" placeholder="Барсик" id="name-field" >
+                        <label for="weight-field">Вес (кг):*</label>
+                        <input type="number" name="weight" class="form__field" placeholder="7" id="weight-field" >
+                        <label for="age-field">Возраст (лет):</label>
+                        <input type="number" name="age" class="form__field" placeholder="7" id="age-field" >
+                    </div>
+                    <div class="form__goal">
+                        <input type="radio" name="goal" id="radio-weight-loss" class="form__radio" checked>
+                        <label for="radio-weight-loss">Похудение</label>
+                        <input type="radio" name="goal" id="radio-weight-up" class="form__radio">
+                        <label for="radio-weight-up">Набор массы</label>
+                        <input type="radio" name="goal" id="radio-weight-other" class="form__radio">
+                        <label for="radio-weight-other">Не знаю (Нужен ваш совет)</label>
+                    </div>
+                    <fieldset class="form__contact">
+                        <legend class="form__small-title">Контактные данные (владельца кота)</legend>
+                        <label for="email-field">E-mail:*</label>
+                        <input type="email" name="email" class="form__field" placeholder="kuklachev@gmail.com" id="email-field" >
+                        <label for="phone-field">Телефон:*</label>
+                        <input type="number" name="phone" class="form__field" placeholder="8 (960) 900-60-90" id="phone-field" >
+                    </fieldset>
+                    <fieldset class="form__comment">
+                        <legend class="form__small-title">Комментарий</legend>
+                        <textarea name="comment" placeholder="Расскажите обо всех повадках кота" class="form__field form__field-textarea"></textarea>
+                    </fieldset>
+                    <fieldset class="form__other">
+                        <legend class="form__small-title">Дополнительно</legend>
+                        <input type="checkbox" name="sweetener" id="checkbox-sweetener" class="form__checkbox" checked>
+                        <label for="checkbox-sweetener">Сахарозаменитель</label>
+                        <input type="checkbox" name="water" id="checkbox-water" class="form__checkbox">
+                        <label for="checkbox-water">Питьевая вода</label>
+                        <input type="checkbox" name="milk" id="checkbox-milk" class="form__checkbox">
+                        <label for="checkbox-milk">Молоко</label>
+                        <input type="checkbox" name="vitamins" id="checkbox-vitamins" class="form__checkbox">
+                        <label for="checkbox-vitamins">Витамины</label>
+                    </fieldset>
+                    <button type="submit" class="form__button button ">Отправить заявку </button>
+                    <span class="form__note">* — Обязательные поля</span>
+                </form>
+            </section>
+            <section class="contacts">
+                <div class="contacts__descript">
+                    <h3 class="contacts__title">приглашаем  к сотрудничеству  дилеров!</h3>
+                    <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8   Санкт-Петербург</p>
+                </div>
+            </section>
+        </main>
+        <footer class="page-footer">
+            <div class="page-footer__wrap">
+                <a class="page-footer__logo" href="#">
+                    <img class="ppage-footer__logo-img" src="http://placehold.it/150x100" alt="Cat-energy">
+                </a>
+            </div>
+            <div class="page-footer__social">
+                <ul class="page-footer__social__items">
+                    <li class="page-footer__social__item page-footer__social__item--vk"><a href="#">vk</a></li>
+                    <li class="page-footer__social__item page-footer__social__item--insta"><a href="#">insta</a></li>
+                    <li class="page-footer__social__item page-footer__social__item--facebook"><a href="#">facebook</a></li>
+                </ul>
+            </div>
+            <div >
+                <a href="#" class="page-footer__link">HTML Academy</a>
+            </div>
+        </footer>
+
+    </body>
+</html>

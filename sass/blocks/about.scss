@@ -1,0 +1,23 @@
+.about{
+  background-color: $main-green;
+  background-image: url("img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+
+}
+
+.about__title{
+  font-family: Oswald, sans-serif;
+  font-weight: normal;
+  font-size: 36px;
+  line-height: 36px;
+  color: $white-color;
+
+}
+
+.about__descript{
+  font-family: Oswald, sans-serif;
+  font-size: 14px;
+  color: $white-color;
+  text-transform: uppercase;
+}
+

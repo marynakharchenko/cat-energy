@@ -1,0 +1,27 @@
+.promo-item{
+  position: relative;
+  width: 280px;
+  height: 290px;
+  background-color: $main-green;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+
+}
+.promo__icon{
+  display: inline-block;
+  margin-top: 60px;
+  width: 85px;
+  height: 85px;
+  background-image: url("../../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+  margin-left:((280px - 85)/2);
+}
+
+.promo__descript{
+  font-size: 16px;
+  color: $white-color;
+  margin-left: 45px;
+  margin-right: 45px;
+  text-align: center;
+}

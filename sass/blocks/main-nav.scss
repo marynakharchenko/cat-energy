@@ -1,0 +1,14 @@
+@import "../variables/variables";
+
+.main-nav__list {
+  list-style: none;
+  background-color: $white-color;
+}
+
+.site-list__item a{
+  display: block;
+  font-family: Oswald, sans-serif;
+  font-size: 20px;
+  color: $black-color;
+  text-transform: uppercase;
+}

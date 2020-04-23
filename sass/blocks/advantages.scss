@@ -1,0 +1,22 @@
+.advantages__item__icon{
+  display: inline-block;
+  width: 60px;
+  height: 60px;
+  background-color: $main-green;
+  background-repeat: no-repeat;
+  background-position: center;
+    &--fresh{
+      background-image: url("../../img/advantage-leaf@1x.png");
+    }
+    &--fast{
+      background-image: url("../../img/advantage-powder@1x.png");
+    }
+    &--food{
+      background-image: url("../../img/advantage-dining@1x.png");
+    }
+    &--time{
+      background-image: url("../../img/advantage-clock@1x.png");
+    }
+
+}
+

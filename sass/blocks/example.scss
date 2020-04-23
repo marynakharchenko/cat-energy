@@ -1,0 +1,46 @@
+.example{
+  background-color: $grey-color;
+}
+
+.example__item{
+  position: relative;
+  display: inline-block;
+  width: 125px;
+  //padding-top: 5px;
+  border:1px solid #cdcdcd;
+  border-radius: 3px;
+  height: 70px;
+  box-sizing: border-box;
+
+}
+
+.example__item__num{
+  font-family: Oswald, sans-serif;
+  font-weight: normal;
+  font-size: 24px;
+  text-transform: uppercase;
+  color: $black-color;
+  text-align: center;
+}
+
+.example__item__descript{
+  display: inline-block;
+  text-align: center;
+  position: absolute;
+  font-size: 12px;
+  line-height: 12px;
+  color: $dark-color;
+  width: 88px;
+  background-color: $grey-color;
+  top:45px;
+  left: 20px;
+}
+
+.example__item__total{
+  font-family: Oswald, sans-serif;
+  font-weight: normal;
+  font-size: 14px;
+  text-transform: uppercase;
+  color: $black-color;
+  display: inline-block;
+}

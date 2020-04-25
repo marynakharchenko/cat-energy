@@ -1,6 +1,18 @@
+.main-katalog{
+  min-width: 320px;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
 .main-katalog__item  {
+  position: relative;
+  //display: flex;
+  //flex-direction: column;
   background-color:$grey-color;
   padding: 20px;
+  margin-bottom: 20px;
 }
 
 .main-katalog__item__title{
@@ -16,11 +28,14 @@
   display: inline-block;
   width: 80px;
   height: 52px;
+  margin: 0;
+  padding: 0;
   box-sizing: border-box;
   vertical-align: middle;
-  background-image: url("../../img/ellipse.png");
+  background-image: url("../../img/elips.svg");
   background-repeat: no-repeat;
   background-position: center;
+  background-size: auto;
 }
 .main-katalog__item__icon::before{
   content: "";
@@ -43,7 +58,10 @@
   margin: 0;
   background-image: url("../../img/icon-cat-pro.svg");
 }
-
+.main-katalog__item__descript{
+  padding-bottom: 20px;
+  border-bottom: 1px solid #d9d9d9;
+}
 .main-katalog__item__button{
   border: none;
   font-family: Oswald, sans-serif;
@@ -68,3 +86,71 @@
   text-align: left;
 }
 
+@media (min-width: $tablet-width) {
+  .main-katalog__item{
+    padding-left: 50px;
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  .main-katalog__item__descript{
+    width: 60%;
+    border: none;
+  }
+
+  .main-katalog__item__icon{
+    position: absolute;
+    top:50px;
+    right: 50px;
+    width: 200px;
+    height: 200px;
+  }
+
+  .main-katalog__item__icon::before{
+    width: 200px;
+    height: 150px;
+    padding-top: 50px;
+  }
+
+}
+
+@media (min-width: $desktop-width){
+  .main-katalog{
+    padding-top: 70px;
+    padding-left: 70px;
+    padding-right: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  .main-katalog__item{
+    width: 50%;
+    padding-left: 50px;
+    margin-right: 40px;
+    margin-left: 40px;
+   }
+  .main-katalog__item__descript{
+    width: 100%;
+  }
+    .main-katalog__item__icon{
+    position: relative;
+      top:0;
+      left: 0;
+      display: inline-block;
+      width: 180px;
+      height: 110px;
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      vertical-align: middle;
+  }
+  .main-katalog__item__icon::before{
+    width: 30%;
+    height: 100px;
+   }
+
+  .icon--weight-up::before{
+    width: 130px;
+    height: 80px;
+   }
+}

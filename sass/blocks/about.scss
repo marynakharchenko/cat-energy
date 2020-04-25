@@ -1,8 +1,20 @@
 .about{
-  background-color: $main-green;
-  background-image: url("img/index-background-mobile@1x.jpg");
-  background-repeat: no-repeat;
 
+  background-image: linear-gradient(to top, $white-color 200px, transparent 200px), url("../../img/index-background-mobile@1x.jpg");
+  background-repeat: no-repeat;
+  background-size:auto;
+  height: 500px;
+  background-position:  bottom, top;
+  position: relative;
+}
+
+.about__flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
 }
 
 .about__title{
@@ -11,7 +23,9 @@
   font-size: 36px;
   line-height: 36px;
   color: $white-color;
-
+  text-align: center;
+  padding: 0;
+  margin: 0;
 }
 
 .about__descript{
@@ -19,5 +33,78 @@
   font-size: 14px;
   color: $white-color;
   text-transform: uppercase;
+  text-align: center;
+  margin-top: 20px;
 }
 
+.about__img{
+  width: 280px;
+  vertical-align: center;
+}
+
+.about__button{
+  min-width: 245px;
+  order: 5;
+}
+
+@media (min-width: $tablet-width) {
+  .about{
+    background-image: none;
+    height: 700px;
+  }
+
+  .about__title{
+    font-size: 60px;
+    color: $black-color;
+    line-height: 60px;
+    text-align: left;
+  }
+  .about__descript{
+    color: $dark-color;
+    font-size: 20px;
+    text-align: left;
+    margin-top: 40px;
+    padding: 0;
+
+  }
+  .about__flex{
+    padding-right: 120px;
+    padding-left: 120px;
+    padding-top: 30px;
+    align-items: self-start;
+  }
+
+  .about__button{
+    order: 0;
+    margin-top: 45px;
+  }
+
+  .about__img{
+    position: absolute;
+    z-index: -1;
+    top:250px;
+    min-width: 450px;
+    flex-grow: 1;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .about{
+    background-image: linear-gradient(to right, $white-color 50%, transparent 50%), url("../../img/index-background-desktop@1x.jpg");
+    background-repeat: no-repeat;
+    background-size:contain;
+    height: 700px;
+    background-position: left,right;
+    position: relative;
+  }
+  .about__flex{
+    padding-top: 200px;
+    padding-right: 185px;
+    padding-left: 185px;
+  }
+  .about__img{
+    z-index: 1;
+    top:170px;
+    left:600px;
+  }
+}

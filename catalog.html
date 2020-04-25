@@ -6,28 +6,24 @@
     <link rel="stylesheet" href="./build/css/style.css">
 </head>
 <body>
-    <header class="page-header">
+<header class="page-header">
+    <div class="main-header-flex">
         <a class="page-header__logo" href="#">
-            <img class="page-header__logo-img" src="http://placehold.it/150x100" alt="Cat-energy">
+            <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="42px">
         </a>
-
-        <nav class="main-nav">
-            <button class="main-nav__toggle" type="button"> </button>
-            <div class="main-nav__wrap">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item ">
-                        <a href="#">Главная</a>
-                    </li>
-                    <li class="site-list__item site-list__item--active">
-                        <a href="#">Каталог продукции</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="#">Подбор программы</a>
-                    </li>
-                </ul>
-            </div>
-        </nav>
-    </header>
+        <button class="main-nav__toggle" type="button"> </button>
+    </div>
+    <nav class="main-nav">
+        <ul class="main-nav__list site-list">
+            <li><a href="#" class="site-list__item ">Главная</a>
+            </li>
+            <li ><a href="#" class="site-list__item site-list__item--activ">Каталог продукции</a>
+            </li>
+            <li><a href="#" class="site-list__item">Подбор программы</a>
+            </li>
+        </ul>
+    </nav>
+</header>
     <main class="catalog-main">
         <section class="catalog">
             <h2 class="catalog__title title-h2">Каталог продукции</h2>

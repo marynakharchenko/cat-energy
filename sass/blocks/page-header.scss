@@ -1,1 +1,51 @@
+.page-header__logo{
+  padding-right: 40px;
+  &:hover,
+  &:focus{
+    opacity: 0.8;
+    outline: none;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
 
+.page-header{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  min-width: 320px;
+  margin: 0 auto;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 10px;
+}
+
+.main-header-flex{
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-header{
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 20px;
+    padding-right: 30px;
+    padding-left: 30px;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .page-header{
+    position: absolute;
+    z-index: 2;
+    padding-right: 110px;
+    padding-left: 110px;
+    margin: 0;
+    width: 100%;
+    box-sizing: border-box;
+    padding-top: 40px;
+  }
+}

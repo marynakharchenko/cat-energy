@@ -7,33 +7,31 @@
  </head>
  <body>
     <header class="page-header">
-        <a class="page-header__logo" href="#">
-             <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="32px">
-        </a>
-
-        <nav class="main-nav">
+        <div class="main-header-flex">
+            <a class="page-header__logo" href="#">
+                 <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="42px">
+            </a>
             <button class="main-nav__toggle" type="button"> </button>
-            <div class="main-nav__wrap">
-                <ul class="main-nav__list site-list">
-                    <li class="site-list__item site-list__item--active">
-                        <a href="#">Главная</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="#">Каталог продукции</a>
-                    </li>
-                    <li class="site-list__item">
-                        <a href="#">Подбор программы</a>
-                    </li>
-                </ul>
-            </div>
+        </div>
+        <nav class="main-nav">
+            <ul class="main-nav__list site-list">
+                <li><a href="#" class="site-list__item site-list__item--activ">Главная</a>
+                </li>
+                <li ><a href="#" class="site-list__item">Каталог продукции</a>
+                </li>
+                <li><a href="#" class="site-list__item">Подбор программы</a>
+                </li>
+            </ul>
         </nav>
     </header>
     <main class="page-main">
         <section class="about">
-            <h1 class="about__title">Функциональное питание для котов </h1>
-            <p class="about__descript">Занялся собой? Займись котом!</p>
-            <button type="button" class="button about__button">Подобрать программу</button>
-            <img src="img/index-can-mobile@1x.png" alt="Функциональное питание для котов">
+            <div class="about__flex">
+                <h1 class="about__title">Функциональное<br>питание для котов </h1>
+                <p class="about__descript">Занялся собой? Займись котом!</p>
+                <button type="button" class="button about__button">Подобрать программу</button>
+                <img src="img/index-can-mobile@1x.png" alt="Функциональное питание для котов" class="about__img">
+            </div>
         </section>
         <section class="main-katalog">
             <article class="main-katalog__item main-katalog__item--weight-loss">

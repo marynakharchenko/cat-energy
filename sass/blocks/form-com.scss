@@ -1,0 +1,23 @@
+.fields-flex{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-right: 20px;
+  padding-left: 20px;
+}
+
+
+@media (min-width: $tablet-width) {
+  .fields-flex{
+    padding-right: 70px;
+    padding-left: 70px;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .fields-flex{
+    flex-direction: row;
+    padding-right: 110px;
+    padding-left: 110px;
+  }
+}

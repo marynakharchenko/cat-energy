@@ -61,6 +61,47 @@ a{
 
 }
 
+.title-line{
+  padding-left: 20px;
+  margin: 0;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  box-sizing: border-box;
+  &::after{
+    content: "";
+    margin: 0;
+    margin-left: 20px;
+    width:10px;
+    flex-grow: 1;
+    flex-shrink: 0;
+    height: 3px;
+    background-color: $main-green;
+  }
+}
+
+@media (min-width: $tablet-width) {
+  .title-line {
+    padding-left: 0;
+
+    &::before {
+      content: "";
+      margin: 0;
+      padding-left: 0;
+      margin-right: 40px;
+      width: 30px;
+      flex-shrink: 0;
+      height: 3px;
+      background-color: $main-green;
+    }
+  }
+}
+@media (min-width: $desktop-width){
+  .title-line::before {
+      margin-right: 40px;
+      width: 70px;
+    }
+}
 //-------------FIELD----------
 
 .field-common{
@@ -79,7 +120,12 @@ a{
     }
 }
 
-//-------------FLEX------------
+.fieldset {
+  margin: 0;
+  margin-bottom: 20px;
+  padding: 0;
+  border: none;
+}
 
 
 

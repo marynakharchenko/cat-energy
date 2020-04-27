@@ -72,30 +72,36 @@
                 <p class="advantages__descript">Уже через месяц наслаждайтесь изменениями к лучшему вашего питомца!</p>
             </div>
         </section>
-        <section class="exampele-block">
-            <div class="example">
-                <h2 class="example__title title-h2">Живой пример</h2>
-                <p class="example__descript">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
-                    Отличный результат без изнуряющих тренировок!
-                    При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
-                <div class="example__item example__item--weight">
-                    <p class="example__item__num">5 кг</p>
-                    <p class="example__item__descript">снижение<br> веса</p>
+        <section class="example-block">
+            <div class="example-block__flex">
+                <div class="example">
+                    <h2 class="example__title title-h2">Живой пример</h2>
+                    <p class="example__descript">Борис сбросил 5 кг за 2 месяца, просто заменив свой обычный корм на Cat Energy Slim.
+                        Отличный результат без изнуряющих тренировок!
+                        При этом он не менял своих привычек и по-прежнему спит по 16 часов в день. </p>
+                     <div class="example__small-block">
+                        <div class="example__item example__item--weight">
+                            <p class="example__item__num">5 кг</p>
+                            <p class="example__item__descript">снижение<br> веса</p>
+                        </div>
+                        <div class="example__item example__item--time">
+                            <p class="example__item__num">60 дней</p>
+                            <p class="example__item__descript">затрачено времени</p>
+                        </div>
+                        <div class="example__item__total ">
+                            <p class="example__item__total__descript">Затраты на питание: 15 000 руб.</p>
+                        </div>
+                    </div>
                 </div>
-                <div class="example__item example__item--time">
-                    <p class="example__item__num">60 дней</p>
-                    <p class="example__item__descript">затрачено времени</p>
+                <div class="before-after">
+                    <img src="img/before-mobile@1x.png" alt="Живой пример" class="before-after__img before-after__img--before">
+                   <div class="before-after__range-flex">
+                        <span class="before-after__before">Было</span>
+                        <input type="range" name="before-after" id="range-before-after" class="before-after__range">
+                        <label class="before-after__range--label" for="range-before-after"></label>
+                        <span class="before-after__after">Стало</span>
+                    </div>
                 </div>
-                <div class="example__item__total ">
-                    <p class="example__item__total__descript">Затраты на питание: 15 000 руб.</p>
-                </div>
-            </div>
-            <div class="before-after">
-                <img src="img/before-mobile@1x.png" alt="Живой пример">
-                <input type="range" name="before-after" id="range-before-after" class="before-after__range">
-                <label class="before-after__range-label" for="range-before-after"></label>
-                <span class="before-after__before">Было</span>
-                <span class="before-after__afret">Стало</span>
             </div>
         </section>
         <section class="contacts">
@@ -106,20 +112,22 @@
         </section>
     </main>
  <footer class="page-footer">
-     <div class="page-footer__wrap">
-         <a class="page-footer__logo" href="#">
-             <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat-energy" width="140px">
-         </a>
-     </div>
-     <div class="page-footer__social">
-         <ul class="page-footer__items">
-             <li class="page-footer__item page-footer__item--vk"><a href="#">vk</a></li>
-             <li class="page-footer__item page-footer__item--insta"><a href="#">insta</a></li>
-             <li class="page-footer__item page-footer__item--facebook"><a href="#">facebook</a></li>
-         </ul>
-     </div>
-     <div >
-         <a href="#" class="page-footer__link">HTML Academy</a>
+     <div class="page-footer__flex">
+         <div class="page-footer__wrap">
+             <a class="page-footer__logo" href="#">
+                 <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat-energy" width="140px">
+             </a>
+         </div>
+         <div class="page-footer__social">
+             <ul class="page-footer__items">
+                 <li class="page-footer__item page-footer__item--vk"><a href="#">vk</a></li>
+                 <li class="page-footer__item page-footer__item--insta"><a href="#">insta</a></li>
+                 <li class="page-footer__item page-footer__item--facebook"><a href="#">facebook</a></li>
+             </ul>
+         </div>
+         <div >
+             <a href="#" class="page-footer__link">HTML Academy</a>
+         </div>
      </div>
  </footer>
  </body>

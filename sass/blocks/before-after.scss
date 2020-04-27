@@ -1,3 +1,34 @@
+.before-after{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
 .before-after__range{
+  visibility: hidden;
+}
+
+.before-after__range-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.before-after__img{
+  width: 280px;
+  flex-grow: unset;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .before-after__img{
+    width: 600px;
+  }
+}
+
+
+@media (min-width: $desktop-width){
+
 
 }

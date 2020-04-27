@@ -1,0 +1,26 @@
+.form__small-title{
+  margin-bottom: 20px;
+  padding-top: 20px;
+}
+//.contact-field{
+//
+//}
+
+@media (min-width: $tablet-width) {
+
+}
+
+@media (min-width: $desktop-width){
+  .contact-list{
+   display: flex;
+    flex-direction: row;
+    width: 100%;
+  }
+  .contact-field{
+    width: 50%;
+    &:first-child{
+      padding-right: 40px;
+      box-sizing: border-box;
+    }
+  }
+}

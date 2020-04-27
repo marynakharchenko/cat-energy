@@ -2,6 +2,16 @@
   background-color: $grey-color;
 }
 
+.page-footer__flex{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: 35px;
+  padding-bottom: 20px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
 .page-footer__logo:hover,
 .page-footer__logo:focus{
   opacity: 0.8;
@@ -30,4 +40,44 @@
   &--facebook{
     background-image: url("../../img/icon-fb.svg");
   }
+}
+.page-footer__items{
+  display: inline-block;
+  margin: 0 auto;
+  padding: 0;
+}
+.page-footer__social{
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-bottom: 1px solid #d9d9d9;
+  border-top: 1px solid #d9d9d9;
+  margin-bottom: 20px;
+  margin-top: 20px;
+}
+
+@media (min-width: $tablet-width) {
+  .page-footer__flex {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    padding-left: 30px;
+    padding-right: 30px;
+  }
+  .page-footer__social{
+    border: none;
+    width: auto;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .page-footer__flex {
+    padding-left: 110px;
+    padding-right: 110px;
+  }
+
 }

@@ -1,0 +1,119 @@
+.additional-product__flex{
+  display: flex;
+  flex-direction: column;
+  padding-right: 20px;
+  padding-left: 20px;
+  padding-top: 30px;
+}
+
+.additional-product__items {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding-bottom: 30px;
+}
+
+.additional-product__item{
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  padding-bottom: 15px;
+  padding-top: 10px;
+  border-top: 1px solid $grey-color;
+  border-bottom: 1px solid $grey-color;
+}
+.additional-product__name{
+  padding-bottom: 15px;
+  width: 100%;
+}
+.additional-product__number{
+  padding-bottom: 15px;
+
+  text-align: left;
+}
+.additional-product__price{
+  padding-bottom: 15px;
+  margin-left: auto;
+  text-align: right;
+}
+.additional-product__order{
+  width:100%;
+  flex-grow: 1;
+}
+.additional-product__button{
+  width:100%;
+}
+
+@media (min-width: $tablet-width) {
+  .additional-product__flex{
+    padding-right: 30px;
+    padding-left: 30px;
+    padding-top: 60px;
+  }
+  .additional-product__item{
+    padding-bottom: 30px;
+    padding-top: 25px;
+    padding-left: 40px;
+    padding-right: 40px;
+    border: 1px solid $grey-color;
+  }
+  .additional-product__name{
+    width: auto;
+  }
+  .additional-product__number{
+     margin-right: 60px;
+    margin-left: auto;
+  }
+  .additional-product__price{
+     margin: 0;
+  }
+}
+@media (min-width: $desktop-width) {
+  .additional-product__flex{
+    flex-direction: row;
+    padding-right: 110px;
+    padding-left: 110px;
+    justify-content: space-between;
+  }
+  .additional-product__wrap{
+    flex-grow: 1;
+    margin-right: 80px;
+
+  }
+
+  .additional-product__item{
+    align-items: center;
+    justify-content: space-between;
+    padding-bottom: 15px;
+    padding-top: 10px;
+    padding-left: 0;
+    padding-right: 0;
+    border: none;
+    border-bottom: 1px solid $grey-color;
+    border-top: 1px solid $grey-color;
+  }
+  .additional-product__name{
+    min-width:300px;
+    margin-right: 20px;
+    padding: 0;
+  }
+  .additional-product__number{
+    margin: 0;
+    min-width: 150px;
+    margin-right: 20px;
+    padding: 0;
+
+  }
+  .additional-product__price{
+    margin: 0;
+    padding: 0;
+    width: 50px;
+    margin-right: 20px;
+  }
+  .additional-product__order{
+    width:240px;
+    flex-grow: 0;
+
+  }
+}

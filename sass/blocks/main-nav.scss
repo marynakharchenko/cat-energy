@@ -51,8 +51,14 @@
 .main-nav{
   min-width: 320px;
 }
+.hidden{
+  display: none;
+}
 
 @media (min-width: $tablet-width) {
+  .hidden{
+    display: block;
+  }
   .main-nav__toggle{
     display: none;
   }
@@ -81,7 +87,8 @@
 }
 
 @media (min-width: $desktop-width){
-  .site-list__item{
+
+  .site-list__item--index{
     color: $white-color;
     background-color: transparent;
       &--activ {

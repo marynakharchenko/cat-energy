@@ -2,11 +2,12 @@
 <html lang="ru">
  <head>
      <meta charset="utf-8">
+     <meta name="viewport" content="width=device-width,initial-scale=1">
      <title>Cat-energy</title>
    <link rel="stylesheet" href="./build/css/style.css">
  </head>
  <body>
-    <header class="page-header">
+    <header class="page-header page-header--index">
         <div class="main-header-flex">
             <a class="page-header__logo" href="#">
                 <picture>
@@ -15,15 +16,16 @@
                     <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="42px" width="200px">
                 </picture>
             </a>
-            <button class="main-nav__toggle" type="button"> </button>
+            <button class="main-nav__toggle " type="button"> </button>
         </div>
-        <nav class="main-nav">
-            <ul class="main-nav__list site-list">
-                <li><a href="#" class="site-list__item site-list__item--activ">Главная</a>
+
+        <nav class="main-nav hidden">
+            <ul class="main-nav__list site-list ">
+                <li><a href="#" class="site-list__item site-list__item--activ site-list__item--index site-list__item--index--activ">Главная</a>
                 </li>
-                <li ><a href="#" class="site-list__item">Каталог продукции</a>
+                <li ><a href="#" class="site-list__item site-list__item--index">Каталог продукции</a>
                 </li>
-                <li><a href="#" class="site-list__item">Подбор программы</a>
+                <li><a href="#" class="site-list__item site-list__item--index">Подбор программы</a>
                 </li>
             </ul>
         </nav>

@@ -36,6 +36,11 @@ a{
       color: rgba($white-color, 0.3);
     }
 }
+@media (min-width: $tablet-width) {
+  .button{
+    font-size: 20px;
+    }
+}
 
   //-------------------TITLE-----------------
 
@@ -45,6 +50,13 @@ a{
   font-size: 36px;
   line-height: 36px;
   color: $black-color;
+}
+
+@media (min-width: $tablet-width) {
+  .title-h2 {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }
 
 .title-small-h3{

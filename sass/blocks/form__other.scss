@@ -41,6 +41,8 @@
 
 @media (min-width: $tablet-width) {
   .other-block{
+    box-sizing: border-box;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     flex-direction: row;
@@ -48,9 +50,7 @@
   }
   .other-block__check{
     width: 250px;
-    flex-shrink: 0;
-    border: 1px solid red;
-  }
+     }
 }
 
 @media (min-width: $desktop-width){

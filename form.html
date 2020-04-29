@@ -9,7 +9,11 @@
     <header class="page-header">
         <div class="main-header-flex">
             <a class="page-header__logo" href="#">
-                <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="42px">
+                <picture>
+                    <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg">
+                    <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"  height="42px" width="200px">
+                </picture>
             </a>
             <button class="main-nav__toggle" type="button"> </button>
         </div>

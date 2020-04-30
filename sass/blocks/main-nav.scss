@@ -56,6 +56,9 @@
 }
 
 @media (min-width: $tablet-width) {
+  .main-nav{
+    min-width: 500px;
+  }
   .hidden{
     display: block;
   }
@@ -95,5 +98,8 @@
         border-bottom: 2px solid $white-color;
       }
   }
+  .site-list__item {
+    font-size: 20px;
 
+  }
 }

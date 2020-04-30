@@ -8,8 +8,6 @@
 
 .main-katalog__item  {
   position: relative;
-  //display: flex;
-  //flex-direction: column;
   background-color:$grey-color;
   padding: 20px;
   margin-bottom: 20px;
@@ -20,10 +18,12 @@
   font-family: Oswald, sans-serif;
   text-transform: uppercase;
   font-size: 24px;
+  line-height: 36px;
   font-weight: normal;
   color: $black-color;
   vertical-align: middle;
 }
+
 .main-katalog__item__icon{
   display: inline-block;
   width: 80px;
@@ -37,6 +37,7 @@
   background-position: center;
   background-size: auto;
 }
+
 .main-katalog__item__icon::before{
   content: "";
   display: inline-block;
@@ -52,16 +53,19 @@
 .icon--weight-loss::before{
   background-image: url("../../img/icon-cat-slim.svg");
 }
+
 .icon--weight-up::before{
   width: 70px;
   height: 50px;
   margin: 0;
   background-image: url("../../img/icon-cat-pro.svg");
 }
+
 .main-katalog__item__descript{
   padding-bottom: 20px;
   border-bottom: 1px solid #d9d9d9;
 }
+
 .main-katalog__item__button{
   border: none;
   font-family: Oswald, sans-serif;
@@ -69,11 +73,21 @@
   font-size: 16px;
   font-weight: normal;
   color: $black-color;
-
+  &:hover:after{
+    background-image: url("../../img/icon-right-arrow-verylong.svg");
+    background-repeat: no-repeat;
+    vertical-align: middle;
+    text-align: left;
+    width: 30px;
+    height: 15px;
+    margin-left: 10px;
+    display: inline-block;
+  }
     &:active{
       opacity: 0.3;
     }
 }
+
 .main-katalog__item__button::after{
   content: "";
   width: 20px;
@@ -86,7 +100,25 @@
   text-align: left;
 }
 
+
 @media (min-width: $tablet-width) {
+  .main-katalog__item__button{
+    font-size: 20px;
+  }
+
+  .main-katalog__item__title{
+    font-size: 36px;
+    line-height: 40px;
+    width: 60%;
+  }
+
+  .main-katalog{
+    width: 768px;
+    padding-left: 30px;
+    padding-right: 30px;
+    margin: 0 auto;
+  }
+
   .main-katalog__item{
     padding-left: 50px;
     padding-top: 50px;
@@ -95,6 +127,8 @@
 
   .main-katalog__item__descript{
     width: 60%;
+    font-size: 16px;
+    line-height: 24px;
     border: none;
   }
 
@@ -111,27 +145,33 @@
     height: 150px;
     padding-top: 50px;
   }
-
 }
 
 @media (min-width: $desktop-width){
   .main-katalog{
+    box-sizing: border-box;
+    width: 1440px;
     padding-top: 70px;
-    padding-left: 70px;
-    padding-right: 70px;
+    padding-left: 110px;
+    padding-right: 110px;
     display: flex;
     flex-direction: row;
     justify-content: space-between;
   }
+
   .main-katalog__item{
-    width: 50%;
+    width: 570px;
+    padding-top: 35px;
+    padding-right: 50px;
+    box-sizing: border-box;
     padding-left: 50px;
-    margin-right: 40px;
-    margin-left: 40px;
    }
+
   .main-katalog__item__descript{
+    padding-top: 35px;
     width: 100%;
   }
+
     .main-katalog__item__icon{
     position: relative;
       top:0;
@@ -144,6 +184,7 @@
       box-sizing: border-box;
       vertical-align: middle;
   }
+
   .main-katalog__item__icon::before{
     width: 30%;
     height: 100px;

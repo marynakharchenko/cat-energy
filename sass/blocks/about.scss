@@ -1,5 +1,4 @@
 .about{
-
   background-image: linear-gradient(to top, $white-color 200px, transparent 200px), url("../../img/index-background-mobile@1x.jpg");
   background-repeat: no-repeat;
   background-size:auto;
@@ -49,8 +48,10 @@
 
 @media (min-width: $tablet-width) {
   .about{
+    width: 768px;
     background-image: none;
     height: 700px;
+    margin: 0 auto;
   }
 
   .about__title{
@@ -59,18 +60,20 @@
     line-height: 60px;
     text-align: left;
   }
+
   .about__descript{
     color: $dark-color;
     font-size: 20px;
     text-align: left;
     margin-top: 40px;
     padding: 0;
-
   }
+
   .about__flex{
     padding-right: 120px;
     padding-left: 120px;
-    padding-top: 30px;
+    padding-top: 60px;
+    margin: 0 auto;
     align-items: self-start;
   }
 
@@ -83,28 +86,41 @@
     position: absolute;
     z-index: -1;
     top:250px;
-    min-width: 450px;
+    width: 550px;
     flex-grow: 1;
   }
 }
 
 @media (min-width: $desktop-width){
   .about{
+    width:1440px;
     background-image: linear-gradient(to right, $white-color 50%, transparent 50%), url("../../img/index-background-desktop@1x.jpg");
     background-repeat: no-repeat;
     background-size:contain;
     height: 700px;
     background-position: left,right;
     position: relative;
+    margin: 0 auto;
   }
+
   .about__flex{
-    padding-top: 200px;
+    padding-top: 100px;
     padding-right: 185px;
     padding-left: 185px;
   }
+
   .about__img{
     z-index: 1;
-    top:170px;
-    left:600px;
+    top:120px;
+    left:580px;
+    width: 500px;
+  }
+
+  .about__title{
+    padding-top: 80px;
+  }
+
+  .about__button{
+    margin-top: 50px;
   }
 }

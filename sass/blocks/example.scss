@@ -2,12 +2,15 @@
   margin-top: 40px;
   background-color: $grey-color;
 }
+
 .example{
   display: flex;
   flex-direction: column;
 }
+
 .example-block__flex{
   min-width: 320px;
+  margin: 0 auto;
   padding-right: 20px;
   padding-left: 20px;
   padding-top: 20px;
@@ -18,7 +21,6 @@
   position: relative;
   display: inline-block;
   width: 125px;
-  //padding-top: 5px;
   border:1px solid #cdcdcd;
   border-radius: 3px;
   height: 70px;
@@ -27,7 +29,6 @@
     &--weight{
       margin-right: 30px;
     }
-
 }
 
 .example__item__num{
@@ -37,6 +38,8 @@
   text-transform: uppercase;
   color: $black-color;
   text-align: center;
+  margin: 0;
+  margin-top: 20px;
 }
 
 .example__item__descript{
@@ -49,8 +52,17 @@
   width: 88px;
   background-color: $grey-color;
   top:45px;
-  left: 20px;
+  margin-right: auto;
+  margin-left: auto;
+  left: 0;
+  right: 0;
+
 }
+
+.example__item__total__descript br{
+  display: none;
+}
+
 .example__small-block{
   display: flex;
   justify-content: space-between;
@@ -73,64 +85,97 @@
 }
 
 @media (min-width: $tablet-width) {
+
   .example-block__flex{
+    width: 768px;
     padding-right: 30px;
     padding-left: 30px;
     padding-top: 40px;
     padding-bottom: 60px;
   }
+
   .example-block{
     margin-top: 0;
     background-image: linear-gradient(to top, $grey-color 35%, $white-color 35%);
     background-repeat: no-repeat;
     background-size:contain;
   }
+  .example__item{
+    width: 160px;
+  }
   .example__small-block{
     margin-top: 40px;
     align-content: space-between;
   }
+
   .example__item__total{
     text-align: right;
-    width: 130px;
+    width: 220px;
+    font-size: 20px;
     margin-right: 0;
   }
+
+  .example__item__num{
+    font-size: 30px;
+  }
+
   .example__item__descript{
     background-color: $white-color;
+    width: 130px;
+  }
+
+  .example__item__total__descript br{
+    display:inline;
+  }
+  .example__item__descript br{
+    display: none;
   }
 }
 
 @media (min-width: $desktop-width){
   .example-block__flex{
+    width: 1440px;
     display: flex;
+    box-sizing: border-box;
     flex-direction: row;
     padding-right: 110px;
     padding-left: 110px;
     padding-top: 10px;
     padding-bottom: 70px;
   }
+
   .example-block{
     background-image: linear-gradient(to top, $grey-color 75%, $white-color 75%);
     background-repeat: no-repeat;
     background-size:contain;
   }
+
   .example{
     width: 50%;
     padding-right: 180px;
   }
+
   .example__descript{
     margin-top: 100px;
   }
+
   .example__item__descript{
     background-color: $grey-color;
   }
+
   .example__small-block{
     margin-top: 40px;
     justify-content: flex-start;
   }
+
   .example__item__total{
     text-align: left;
     width: 300px;
     margin:0;
     margin-top: 40px;
+  }
+
+  .example__item__total__descript br{
+    display:none;
   }
 }

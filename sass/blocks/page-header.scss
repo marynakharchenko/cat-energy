@@ -1,5 +1,4 @@
 .page-header__logo{
-
   padding-right: 40px;
   &:hover,
   &:focus{
@@ -29,7 +28,8 @@
 }
 
 @media (min-width: $tablet-width) {
-  .page-header{
+   .page-header{
+    width: 768px;
     flex-direction: row;
     justify-content: space-between;
     padding-top: 20px;
@@ -42,12 +42,17 @@
   .page-header{
     padding-right: 110px;
     padding-left: 110px;
-    margin: 0;
-    width: 100%;
+    width: 1440px;
     box-sizing: border-box;
     padding-top: 40px;
+
     &--index{
       position: absolute;
+      margin-left: auto;
+      margin-right: auto;
+      left: 0;
+      right: 0;
+      text-align: center;
       z-index: 2;
     }
   }

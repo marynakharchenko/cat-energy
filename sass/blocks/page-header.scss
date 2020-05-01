@@ -23,12 +23,14 @@
 
 .main-header-flex{
   display: flex;
+  width: 100%;
   justify-content: space-between;
   margin-bottom: 20px;
 }
 
 @media (min-width: $tablet-width) {
    .page-header{
+     box-sizing: border-box;
     width: 768px;
     flex-direction: row;
     justify-content: space-between;
@@ -36,17 +38,20 @@
     padding-right: 30px;
     padding-left: 30px;
   }
+  .main-header-flex{
+    width: 240px;
+  }
 }
 
-@media (min-width: $desktop-width){
-  .page-header{
+@media (min-width: $desktop-width) {
+  .page-header {
     padding-right: 110px;
     padding-left: 110px;
     width: 1440px;
     box-sizing: border-box;
     padding-top: 40px;
 
-    &--index{
+    &--index {
       position: absolute;
       margin-left: auto;
       margin-right: auto;
@@ -56,6 +61,6 @@
       z-index: 2;
     }
   }
-
-
 }
+
+

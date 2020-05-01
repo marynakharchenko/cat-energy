@@ -57,7 +57,8 @@
 
 @media (min-width: $tablet-width) {
   .main-nav{
-    min-width: 500px;
+    min-width: 440px;
+    flex-shrink: 1;
   }
   .hidden{
     display: block;
@@ -68,6 +69,7 @@
   .main-nav__list{
     display: flex;
     justify-content: flex-end;
+    margin: 0;
   }
   .main-nav__list li{
     display: inline-block;

@@ -164,17 +164,25 @@ a{
 
 .field-common{
   outline: 1px solid #cdcdcd;
-  height: 25px;
+  height: 45px;
   padding-top: 15px;
   padding-left: 15px;
+  padding-right: 15px;
   padding-bottom: 15px;
   box-sizing: border-box;
   font-family: Oswald, sans-serif;
   font-size: 16px;
   color:$dark-color;
   text-transform: uppercase;
-    &:focus{
+    &:focus,
+    &:hover{
       outline: 2px solid $dark-color;
+    }
+    &--phone{
+      padding-right: 65px;
+    }
+    &--email{
+      padding-right: 65px;
     }
 }
 
@@ -185,5 +193,12 @@ a{
   border: none;
 }
 
+@media (min-width: $tablet-width) {
+  .field-common{
+    height: 50px;
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 
 

@@ -1,9 +1,16 @@
 .form-submit{
   display: flex;
+  min-width: 320px;
+  margin: 0;
+  margin-right: auto;
+  margin-left: auto;
+  margin-top: 50px;
+  box-sizing: border-box;
   flex-direction: column;
   justify-content: space-between;
   padding-right: 20px;
   padding-left: 20px;
+
 }
 
 .form__note{
@@ -13,7 +20,7 @@
 
 @media (min-width: $tablet-width) {
   .form-submit{
-    display: flex;
+    width: 768px;
     flex-direction: row;
     justify-content: flex-start;
     padding-right: 70px;
@@ -27,6 +34,7 @@
 
 @media (min-width: $desktop-width){
   .form-submit{
+    width: 1440px;
     padding-right: 110px;
     padding-left: 110px;
     padding-bottom: 80px;

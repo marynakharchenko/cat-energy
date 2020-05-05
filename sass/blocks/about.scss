@@ -9,11 +9,9 @@
 }
 
 .about__flex{
-  display: flex;
+  @include flex-phone;
   flex-direction: column;
   align-items: center;
-  padding-right: 20px;
-  padding-left: 20px;
   padding-top: 30px;
 }
 
@@ -49,6 +47,7 @@
 
 @media (min-width: $tablet-width) {
   .about{
+
     width: 768px;
     background-image: none;
     height: 700px;

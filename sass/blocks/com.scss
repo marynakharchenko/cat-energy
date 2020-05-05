@@ -18,9 +18,6 @@ a{
   text-decoration: none;
 }
 
-//img{
-//  width: 100%;
-//}
 
 //-------------BUTTON------------------
 
@@ -61,8 +58,6 @@ a{
   }
 }
 
-
-
 @media (min-width: $tablet-width) {
   .button{
     font-size: 20px;
@@ -81,6 +76,7 @@ a{
   line-height: 36px;
   color: $black-color;
 }
+
 .title-small-h3{
   font-family: Oswald, sans-serif;
   font-weight: normal;

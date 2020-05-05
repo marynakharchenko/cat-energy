@@ -1,15 +1,3 @@
-.page-header__logo{
-  padding-right: 40px;
-  &:hover,
-  &:focus{
-    opacity: 0.8;
-    outline: none;
-  }
-  &:active{
-    opacity: 0.6;
-  }
-}
-
 .page-header{
   display: flex;
   flex-direction: column;
@@ -28,16 +16,26 @@
   margin-bottom: 20px;
 }
 
+.page-header__logo{
+  padding-right: 40px;
+  &:hover,
+  &:focus{
+    opacity: 0.8;
+    outline: none;
+  }
+  &:active{
+    opacity: 0.6;
+  }
+}
+
 @media (min-width: $tablet-width) {
    .page-header{
-     box-sizing: border-box;
-    width: 768px;
-    flex-direction: row;
-    justify-content: space-between;
-    padding-top: 20px;
-    padding-right: 30px;
-    padding-left: 30px;
+     @include flex-tablet;
+     flex-direction: row;
+     justify-content: space-between;
+     padding-top: 20px;
   }
+
   .main-header-flex{
     width: 240px;
   }
@@ -45,19 +43,20 @@
 
 @media (min-width: $desktop-width) {
   .page-header {
-    padding-right: 110px;
-    padding-left: 110px;
-    width: 1440px;
+    @include flex-desktop;
     box-sizing: border-box;
     padding-top: 40px;
 
     &--index {
       position: absolute;
+
       margin-left: auto;
       margin-right: auto;
       left: 0;
       right: 0;
+
       text-align: center;
+
       z-index: 2;
     }
   }

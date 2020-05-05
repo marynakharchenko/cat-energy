@@ -1,12 +1,7 @@
 
 .additional-product__flex{
-  display: flex;
-  margin: 0 auto;
-  min-width: 320px;
-  box-sizing: border-box;
+  @include flex-phone;
   flex-direction: column;
-  padding-right: 20px;
-  padding-left: 20px;
   padding-top: 30px;
 }
 
@@ -52,9 +47,7 @@
 
 @media (min-width: $tablet-width) {
   .additional-product__flex{
-    width: 768px;
-    padding-right: 30px;
-    padding-left: 30px;
+    @include flex-tablet;
     padding-top: 60px;
   }
   .additional-product__item{
@@ -77,10 +70,8 @@
 }
 @media (min-width: $desktop-width) {
   .additional-product__flex{
-    width: 1440px;
+    @include flex-desktop;
     flex-direction: row;
-    padding-right: 110px;
-    padding-left: 110px;
     justify-content: space-between;
   }
   .additional-product__wrap{

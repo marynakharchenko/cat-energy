@@ -7,6 +7,8 @@ var sass = require("gulp-sass");
 var postcss = require("gulp-postcss");
 var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
+var minify = require("gulp-csso");
+var rename = require("gulp-rename");
 
 gulp.task("css", function () {
   return gulp.src("./sass/style.scss")
@@ -17,6 +19,9 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
+    .pipe(gulp.dest("./build/css"))
+    .pipe(minify())
+    .pipe(rename("style.min.css"))
     .pipe(gulp.dest("./build/css"))
     .pipe(server.stream());
 });

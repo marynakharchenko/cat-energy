@@ -10,7 +10,7 @@
     "gulp-postcss": "8.0.x",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
-    "stylelint": "10.1.x"
+    "stylelint": "^13.3.3"
   },
   "main": "index.js",
   "scripts": {
@@ -39,6 +39,8 @@
   ],
   "homepage": "https://github.com/marynakharchenko/cat-energy#readme",
   "dependencies": {
-    "gulp": "^4.0.2"
+    "gulp": "^4.0.2",
+    "gulp-csso": "^4.0.1",
+    "gulp-rename": "^2.0.0"
   }
 }

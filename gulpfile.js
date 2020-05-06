@@ -9,6 +9,10 @@ var autoprefixer = require("autoprefixer");
 var server = require("browser-sync").create();
 var minify = require("gulp-csso");
 var rename = require("gulp-rename");
+var imagemin = require("gulp-imagemin");
+var del = require("del");
+var webp = require("gulp-webp");
+var mozjpeg = require("imagemin-mozjpeg");
 
 gulp.task("css", function () {
   return gulp.src("./sass/style.scss")
@@ -19,24 +23,88 @@ gulp.task("css", function () {
       autoprefixer()
     ]))
     .pipe(sourcemap.write("."))
-    .pipe(gulp.dest("./build/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(minify())
     .pipe(rename("style.min.css"))
-    .pipe(gulp.dest("./build/css"))
+    .pipe(gulp.dest("build/css"))
     .pipe(server.stream());
+});
+
+gulp.task("images", function () {
+  return gulp.src("./img/**/*.{png,jpg}")
+      .pipe(imagemin([
+        imagemin.optipng({optimizationLevel: 3}),
+        imagemin.mozjpeg({progressive: true}),
+      ]))
+      .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("webp", function () {
+    return gulp.src("./img/**/*.{png,jpg}")
+        .pipe(webp({quality: 90}))
+        .pipe(gulp.dest("build/img"));
+});
+
+gulp.task("html", function () {
+    return gulp.src([
+        "./*.html"
+    ], {
+        base: "./"
+    })
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
+});
+
+gulp.task("js", function () {
+    return gulp.src([
+        "./js/**",
+    ], {
+        base: "./"
+    })
+        .pipe(gulp.dest("build"))
+        .pipe(server.stream());
+});
+
+gulp.task("copy", function () {
+    return gulp.src([
+        "./fonts/**/*.{woff,woff2}",
+        "./img/**/*.svg",
+    ], {
+        base: "./"
+    })
+    .pipe(gulp.dest("build"))
+    .pipe(server.stream());
+});
+
+gulp.task("clean", function () {
+    return del("build");
 });
 
 gulp.task("server", function () {
   server.init({
-    server: "./",
+    server: "./build",
+    single: true,
     notify: false,
     open: true,
     cors: true,
     ui: false
   });
 
-  gulp.watch("./sass/**/*.scss", gulp.series("css"));
-  gulp.watch("./*.html").on("change", server.reload);
+  gulp.watch("./sass/**/*.scss").on("change", gulp.series("css"));
+  gulp.watch("./*.html").on("change", gulp.series("html"));
+  gulp.watch("./js/*.js").on("change", gulp.series("js"));
+
 });
 
-gulp.task("start", gulp.series("css", "server"));
+gulp.task("start", gulp.series(
+    "clean",
+    "copy",
+    "js",
+    "html",
+    "css",
+    "images",
+    "webp",
+    "server"
+));
+
+

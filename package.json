@@ -5,11 +5,13 @@
   "devDependencies": {
     "autoprefixer": "9.5.x",
     "browser-sync": "2.26.x",
-    "gulp": "4.0.x",
+    "del": "^5.1.0",
+    "gulp": "^4.0.2",
     "gulp-plumber": "1.2.x",
     "gulp-postcss": "8.0.x",
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
+    "gulp-webp": "^4.0.1",
     "stylelint": "^13.3.3"
   },
   "main": "index.js",
@@ -17,8 +19,8 @@
     "editorconfig": "editorconfig-cli",
     "stylelint": "stylelint \"source/sass/**/*.scss\" --syntax scss",
     "test": "npm run editorconfig && npm run stylelint",
-    "build": "npx gulp css",
-    "start": "npx gulp start"
+    "build": "gulp build",
+    "start": "npx run gulp build && gulp server"
   },
   "repository": {
     "type": "git",
@@ -39,8 +41,10 @@
   ],
   "homepage": "https://github.com/marynakharchenko/cat-energy#readme",
   "dependencies": {
-    "gulp": "^4.0.2",
     "gulp-csso": "^4.0.1",
-    "gulp-rename": "^2.0.0"
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0"
   }
 }

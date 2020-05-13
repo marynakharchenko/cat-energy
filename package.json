@@ -12,7 +12,12 @@
     "gulp-sass": "4.0.x",
     "gulp-sourcemaps": "2.6.x",
     "gulp-webp": "^4.0.1",
-    "stylelint": "^13.3.3"
+    "stylelint": "^13.3.3",
+    "gulp-csso": "^4.0.1",
+    "gulp-imagemin": "^7.1.0",
+    "gulp-rename": "^2.0.0",
+    "imagemin-jpegtran": "^6.0.0",
+    "imagemin-mozjpeg": "^8.0.0"
   },
   "main": "index.js",
   "scripts": {
@@ -41,10 +46,6 @@
   ],
   "homepage": "https://github.com/marynakharchenko/cat-energy#readme",
   "dependencies": {
-    "gulp-csso": "^4.0.1",
-    "gulp-imagemin": "^7.1.0",
-    "gulp-rename": "^2.0.0",
-    "imagemin-jpegtran": "^6.0.0",
-    "imagemin-mozjpeg": "^8.0.0"
+
   }
 }

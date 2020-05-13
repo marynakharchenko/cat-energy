@@ -1,18 +1,18 @@
 "use strict";
 
-var gulp = require("gulp");
-var plumber = require("gulp-plumber");
-var sourcemap = require("gulp-sourcemaps");
-var sass = require("gulp-sass");
-var postcss = require("gulp-postcss");
-var autoprefixer = require("autoprefixer");
-var server = require("browser-sync").create();
-var minify = require("gulp-csso");
-var rename = require("gulp-rename");
-var imagemin = require("gulp-imagemin");
-var del = require("del");
-var webp = require("gulp-webp");
-var mozjpeg = require("imagemin-mozjpeg");
+const gulp = require("gulp");
+const plumber = require("gulp-plumber");
+const sourcemap = require("gulp-sourcemaps");
+const sass = require("gulp-sass");
+const postcss = require("gulp-postcss");
+const autoprefixer = require("autoprefixer");
+const server = require("browser-sync").create();
+const minify = require("gulp-csso");
+const rename = require("gulp-rename");
+const imagemin = require("gulp-imagemin");
+const del = require("del");
+const webp = require("gulp-webp");
+const mozjpeg = require("imagemin-mozjpeg");
 
 gulp.task("css", function () {
   return gulp.src("./sass/style.scss")
@@ -96,7 +96,7 @@ gulp.task("server", function () {
 
 });
 
-gulp.task("start", gulp.series(
+gulp.task("build", gulp.series(
     "clean",
     "copy",
     "js",

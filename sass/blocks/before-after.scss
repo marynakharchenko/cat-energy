@@ -1,0 +1,51 @@
+.before-after{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.before-after__btn{
+  font-family: Oswald, sans-serif;
+  text-transform: uppercase;
+  font-weight: normal;
+  color: $black-color;
+ font-size: 16px;
+}
+
+.before-after__range{
+  visibility: hidden;
+}
+
+.before-after__range-flex{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.before-after__img{
+  width: 280px;
+  flex-grow: unset;
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+@media (min-width: $tablet-width) {
+  .before-after__img{
+    width: 600px;
+  }
+  .before-after__btn{
+    font-size: 20px;
+    border-bottom: 1px dotted #bebebe;
+    &:hover{
+      border-bottom: 1px solid #848484;
+    }
+    &:active{
+      border: none;
+    }
+  }
+}
+
+
+@media (min-width: $desktop-width){
+
+
+}

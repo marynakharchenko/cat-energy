@@ -1,0 +1,106 @@
+.advantages{
+  @include flex-phone;
+  flex-direction: column;
+}
+
+.advantages__item{
+  position: relative;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  flex-direction: row;
+  min-width: 250px;
+}
+
+.advantages__descript{
+  padding: 0;
+  margin: 0;
+  vertical-align: center;
+  width: 100%;
+}
+
+.advantages__item__icon{
+  display: block;
+  flex-shrink: 0;
+  width: 60px;
+  height: 60px;
+  margin-right: 20px;
+  background-color: $main-green;
+  background-repeat: no-repeat;
+  background-position: center;
+    &--fresh{
+      background-image: url("../../img/advantage-leaf@1x.png");
+    }
+    &--fast{
+      background-image: url("../../img/advantage-powder@1x.png");
+    }
+    &--food{
+      background-image: url("../../img/advantage-dining@1x.png");
+    }
+    &--time{
+      background-image: url("../../img/advantage-clock@1x.png");
+    }
+}
+
+@media (min-width: $tablet-width) {
+  .advantages__item{
+    align-items: stretch;
+  }
+
+  .advantages{
+    @include flex-tablet;
+    flex-direction: row;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    flex-grow: 1;
+
+  }
+
+  .advantages__title{
+    width: 100%;
+  }
+
+  .advantages__item{
+    box-sizing: border-box;
+    padding-right: 50px;
+    flex-direction: column;
+    width: 40%;
+    padding-bottom: 40px;
+    margin-bottom: 50px;
+    background-image: url("../../img/back-1.png");
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: 40%;
+     &:nth-child(3){
+       background-image: url("../../img/back-2.png");
+     }
+    &:nth-child(4){
+      background-image: url("../../img/back-3.png");
+    }
+    &:nth-child(5){
+      background-image: url("../../img/back-4.png");
+    }
+  }
+
+  .advantages__item__icon{
+    width: 80px;
+    height: 80px;
+  }
+
+  .advantages__descript{
+    margin-top: 25px;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .advantages__item{
+    flex-direction: column;
+    width: 245px;
+  }
+
+  .advantages{
+    @include flex-desktop;
+    justify-content: space-between;
+  }
+}

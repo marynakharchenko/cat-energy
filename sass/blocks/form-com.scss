@@ -1,0 +1,20 @@
+.fields-flex{
+  @include flex-phone;
+  flex-direction: column;
+  justify-content: space-between;
+
+}
+
+@media (min-width: $tablet-width) {
+  .fields-flex{
+    @include flex-tablet;
+  }
+}
+
+@media (min-width: $desktop-width){
+  .fields-flex{
+    @include flex-desktop;
+    flex-direction: row;
+
+  }
+}

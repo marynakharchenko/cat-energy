@@ -1,0 +1,74 @@
+.promo-item{
+  position: relative;
+  height: 290px;
+  background-color: $main-green;
+  background-image: url("../../img/gift-photo-mobile@1x.jpg");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.promo{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-content: center;
+}
+
+.promo__icon{
+  display: inline-block;
+  width: 85px;
+  height: 85px;
+  margin: 0;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 60px;
+  background-image: url("../../img/icon-gift.svg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 50%;
+}
+
+.promo__descript{
+  font-size: 16px;
+  color: $white-color;
+  margin-left: 45px;
+  margin-right: 45px;
+  text-align: center;
+}
+
+@media (min-width: $tablet-width) {
+  .promo-item{
+    height: 200px;
+    background-image: url("../../img/gift-photo-tablet@1x.jpg");
+  }
+  .promo{
+    height: inherit;
+    flex-direction: row;
+
+  }
+  .promo__descript{
+    margin-top: auto;
+    margin-bottom: auto;
+    text-align:left;
+    align-self: center;
+  }
+}
+
+@media (min-width: $desktop-width) {
+  .promo-item{
+    width: 240px;
+    height: 300px;
+    background-image: url("../../img/gift-photo-desktop@1x.jpg");
+  }
+  .promo{
+    flex-direction: column;
+  }
+
+  .promo__descript{
+     margin-left: 45px;
+    margin-right: 45px;
+    text-align: center;
+  }
+
+}

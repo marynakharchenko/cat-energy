@@ -2,102 +2,192 @@
 <html lang="ru">
 <head>
     <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <title>Cat-energy</title>
+    <link rel="stylesheet" href="css/style.css">
 </head>
     <body>
-        <header class="page-header">
-            <a class="page-header__logo" href="#">
-                <img class="page-header__logo-img" src="http://placehold.it/150x100" alt="Cat-energy">
+    <header class="page-header">
+        <div class="main-header-flex">
+            <a class="page-header__logo" href="index.html">
+                <picture>
+                    <source media="(min-width: 1440px)" srcset="img/logo-desktop.svg">
+                    <source media="(min-width: 768px)" srcset="img/logo-tablet.svg" >
+                    <img class="page-header__logo-img" src="img/logo-mobile.svg" alt="Cat-energy"   width="200px" height="auto">
+                </picture>
             </a>
-
-            <nav class="main-nav">
-                <button class="main-nav__toggle" type="button"> </button>
-                <div class="main-nav__wrap">
-                    <ul class="main-nav__list site-list">
-                        <li class="site-list__item ">
-                            <a href="#">Главная</a>
-                        </li>
-                        <li class="site-list__item">
-                            <a href="#">Каталог продукции</a>
-                        </li>
-                        <li class="site-list__item site-list__item--active">
-                            <a href="#">Подбор программы</a>
-                        </li>
-                    </ul>
-                </div>
-            </nav>
-        </header>
+            <button class="main-nav__toggle" type="button"> </button>
+        </div>
+        <nav class="main-nav hidden">
+            <ul class="main-nav__list site-list">
+                <li><a href="index.html" class="site-list__item ">Главная</a>
+                </li>
+                <li ><a href="catalog.html" class="site-list__item">Каталог продукции</a>
+                </li>
+                <li><a href="form.html" class="site-list__item site-list__item--activ">Подбор программы</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
         <main class="form-main">
             <section class="form">
-                <h2 class="form__title">Подбор программы</h2>
-                <p class="form__descript">Заполните анкету и мы подберем  программу питания для вашего ко</p>
-                <form class="form__fields">
-                    <div class="form__info">
-                        <label for="name-field">Имя:*</label>
-                        <input type="text" name="name" class="form__field" placeholder="Барсик" id="name-field" >
-                        <label for="weight-field">Вес (кг):*</label>
-                        <input type="number" name="weight" class="form__field" placeholder="7" id="weight-field" >
-                        <label for="age-field">Возраст (лет):</label>
-                        <input type="number" name="age" class="form__field" placeholder="7" id="age-field" >
-                    </div>
-                    <div class="form__goal">
-                        <input type="radio" name="goal" id="radio-weight-loss" class="form__radio" checked>
-                        <label for="radio-weight-loss">Похудение</label>
-                        <input type="radio" name="goal" id="radio-weight-up" class="form__radio">
-                        <label for="radio-weight-up">Набор массы</label>
-                        <input type="radio" name="goal" id="radio-weight-other" class="form__radio">
-                        <label for="radio-weight-other">Не знаю (Нужен ваш совет)</label>
-                    </div>
-                    <fieldset class="form__contact">
-                        <legend class="form__small-title">Контактные данные (владельца кота)</legend>
-                        <label for="email-field">E-mail:*</label>
-                        <input type="email" name="email" class="form__field" placeholder="kuklachev@gmail.com" id="email-field" >
-                        <label for="phone-field">Телефон:*</label>
-                        <input type="number" name="phone" class="form__field" placeholder="8 (960) 900-60-90" id="phone-field" >
-                    </fieldset>
-                    <fieldset class="form__comment">
-                        <legend class="form__small-title">Комментарий</legend>
-                        <textarea name="comment" placeholder="Расскажите обо всех повадках кота" class="form__field form__field-textarea"></textarea>
-                    </fieldset>
-                    <fieldset class="form__other">
-                        <legend class="form__small-title">Дополнительно</legend>
-                        <input type="checkbox" name="sweetener" id="checkbox-sweetener" class="form__checkbox" checked>
-                        <label for="checkbox-sweetener">Сахарозаменитель</label>
-                        <input type="checkbox" name="water" id="checkbox-water" class="form__checkbox">
-                        <label for="checkbox-water">Питьевая вода</label>
-                        <input type="checkbox" name="milk" id="checkbox-milk" class="form__checkbox">
-                        <label for="checkbox-milk">Молоко</label>
-                        <input type="checkbox" name="vitamins" id="checkbox-vitamins" class="form__checkbox">
-                        <label for="checkbox-vitamins">Витамины</label>
-                    </fieldset>
-                    <button type="submit" class="form__button button ">Отправить заявку </button>
-                    <span class="form__note">* — Обязательные поля</span>
-                </form>
+                <div class=" form-intro">
+                    <h2 class="form__title title-h2">Подбор программы</h2>
+                    <p class="form__descript">Заполните анкету и мы подберем<br>  программу питания для вашего ко</p>
+                </div>
+                    <form class="form__fields">
+                        <div class="fields-flex">
+                            <div class="form__info">
+                                <ul class="form__list">
+                                    <li class="form__item">
+                                        <label for="name-field" class="title-small-h3">Имя:*</label>
+                                        <input type="text" name="name" class="form__field field-common" placeholder="Барсик" id="name-field" >
+                                    </li>
+                                    <li class="form__item">
+                                        <label for="weight-field" class="title-small-h3">Вес (кг):*</label>
+                                        <input type="number" name="weight" class="form__field field-common" placeholder="7" id="weight-field" >
+                                    </li>
+                                    <li class="form__item">
+                                        <label for="age-field" class="title-small-h3">Возраст (лет):</label>
+                                        <input type="number" name="age" class="form__field field-common" placeholder="7" id="age-field" >
+                                    </li>
+                                </ul>
+                            </div>
+                            <div class="form__goal">
+                                <input type="radio" name="goal" id="radio-weight-loss" class="form__radio form__radio--checked" checked>
+                                <label for="radio-weight-loss" class="title-small-h3 label__radio label__radio--checked">Похудение</label>
+                                <input type="radio" name="goal" id="radio-weight-up" class="form__radio">
+                                <label for="radio-weight-up" class="title-small-h3 label__radio">Набор массы</label>
+                                <input type="radio" name="goal" id="radio-weight-other" class="form__radio">
+                                <label for="radio-weight-other" class="title-small-h3 label__radio">Не знаю (Нужен ваш совет)</label>
+                            </div>
+                        </div>
+                         <fieldset class="fieldset form__contact">
+                             <div class="title-line__flex form__title">
+                                 <div class="title__flex">
+                                     <legend class=" title-medium title-line form__title">Контактные данные (владельца кота)</legend>
+                                 </div>
+                             </div>
+                               <div class="fields-flex">
+                                    <ul class="form__list contact-list">
+                                        <li class="form__item contact-field">
+                                            <label for="email-field" class="title-small-h3">E-mail:*</label>
+                                            <input type="email" name="email" class="form__field field-common field-common--email" placeholder="kuklachev@gmail.com" id="email-field" >
+                                            <svg class="contact-field__icon contact-field__icon--mail" width="20px" height="20px" x="0px" y="0px" viewBox="0 0 17 13"  xml:space="preserve">
+                                                <path d="M15.6,11.6H1.4V5.8H0V13h17V5.8h-1.4V11.6z M0,0v2.3l8.5,7.1L17,2.3V0H0z M15.6,1.6L8.5,7.5L1.4,1.6V1.4h14.2L15.6,1.6z"/>
+                                            </svg>
+                                        </li>
+                                        <li class="form__item contact-field">
+                                            <label for="phone-field" class="title-small-h3">Телефон:*</label>
+                                            <input type="number" name="phone" class="form__field field-common field-common--phone" placeholder="8 (960) 900-60-90" id="phone-field" >
+                                            <svg class="contact-field__icon contact-field__icon--phone" width="20px" height="20px" x="0px" y="0px" viewBox="0 0 20 20"  xml:space="preserve">
+                                                 <path d="M17.9,9.4H9.4v1.2h8.5l-2.1,2.1l0.9,0.9l3.1-3.1c0.2-0.2,0.2-0.6,0-0.9l-3.1-3.1l-0.9,0.9L17.9,9.4z"/>
+                                                <path d="M8.1,19.4v-6.2c0-0.3-0.3-0.6-0.6-0.6H4.4l0,0H3.1l0,0c0,0.7,0.6,1.2,1.2,1.2h2.5v5H3.1c-1,0.1-1.8-0.7-1.9-1.7
+                                                  c0-0.1,0-0.1,0-0.2V3.1c0-1,0.8-1.8,1.7-1.8c0.1,0,0.1,0,0.2,0h3.7v5H4.4c-0.7,0-1.2,0.6-1.2,1.2h4.4c0.3,0,0.6-0.3,0.6-0.6V0.6
+                                                  C8.1,0.3,7.8,0,7.5,0H3.1C1.5-0.1,0.1,1.2,0,2.9C0,3,0,3.1,0,3.1v13.7c-0.1,1.7,1.2,3.1,2.9,3.1c0.1,0,0.2,0,0.2,0h4.4
+                                                  C7.8,20,8.1,19.7,8.1,19.4z"/>
+                                            </svg>
+                                        </li>
+                                    </ul>
+                                </div>
+                             </fieldset>
+                        <fieldset class=" fieldset form__comment">
+                            <div class="title-line__flex">
+                                <div class="title__flex">
+                                    <legend class=" title-medium title-line form__title">Комментарий</legend>
+                                </div>
+                            </div>
+                            <div class="fields-flex">
+                                <textarea name="comment" placeholder="Расскажите обо всех повадках кота" class="form__field form__field-textarea field-common"></textarea>
+                            </div>
+                         </fieldset>
+                        <fieldset class="fieldset form__other">
+                            <div class="title-line__flex">
+                                <div class="title__flex">
+                                    <legend class=" title-medium title-line form__title">Дополнительно</legend>
+                                </div>
+                            </div>
+                            <div class="fields-flex">
+                                    <ul class="other-block">
+                                        <li class="other-block__check">
+                                            <input type="checkbox" name="sweetener" id="checkbox-sweetener" class="form__checkbox" checked>
+                                            <label for="checkbox-sweetener" class="title-small-h3 label__checkbox">Сахарозаменитель</label>
+                                        </li>
+                                       <li class="other-block__check">
+                                           <input type="checkbox" name="water" id="checkbox-water" class="form__checkbox">
+                                           <label for="checkbox-water" class="title-small-h3 label__checkbox">Питьевая вода</label>
+                                       </li>
+                                       <li class="other-block__check">
+                                           <input type="checkbox" name="milk" id="checkbox-milk" class="form__checkbox">
+                                           <label for="checkbox-milk" class="title-small-h3 label__checkbox">Молоко</label>
+                                       </li>
+                                      <li class="other-block__check">
+                                          <input type="checkbox" name="vitamins" id="checkbox-vitamins" class="form__checkbox">
+                                          <label for="checkbox-vitamins" class="title-small-h3 label__checkbox">Витамины</label>
+                                      </li>
+                                    </ul>
+                                 </div>
+                        </fieldset>
+                        <div class="form-submit">
+                            <button type="submit" class="form__button button ">Отправить заявку </button>
+                            <span class="form__note">* — Обязательные поля</span>
+                        </div>
+
+                     </form>
+
             </section>
             <section class="contacts">
-                <div class="contacts__descript">
-                    <h3 class="contacts__title">приглашаем  к сотрудничеству  дилеров!</h3>
-                    <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8   Санкт-Петербург</p>
+                <div class="contacts__flex">
+                    <div class="contacts__descript">
+                        <h3 class="contacts__title title-small-h3">приглашаем  к сотрудничеству  дилеров!</h3>
+                        <p class="contacts__adress">ул. Большая Конюшенная, д. 19/8   Санкт-Петербург</p>
+                    </div>
                 </div>
             </section>
         </main>
-        <footer class="page-footer">
+    <footer class="page-footer">
+        <div class="page-footer__flex">
             <div class="page-footer__wrap">
                 <a class="page-footer__logo" href="#">
-                    <img class="ppage-footer__logo-img" src="http://placehold.it/150x100" alt="Cat-energy">
+
+                    <img class="page-footer__logo-img" src="img/logo-footer.svg" alt="Cat-energy" width="140px" height="30px">
                 </a>
             </div>
             <div class="page-footer__social">
-                <ul class="page-footer__social__items">
-                    <li class="page-footer__social__item page-footer__social__item--vk"><a href="#">vk</a></li>
-                    <li class="page-footer__social__item page-footer__social__item--insta"><a href="#">insta</a></li>
-                    <li class="page-footer__social__item page-footer__social__item--facebook"><a href="#">facebook</a></li>
+                <ul class="page-footer__items">
+                    <li class="page-footer__item ">
+                        <a href="#" class="page-footer__link">
+                            <svg class="page-footer__icon" width="30px" height="30px" x="0px" y="0px" viewBox="0 0 22 12" xml:space="preserve">
+                             <use xlink:href="img/icon-sprite.svg#icon-vk">   </use>
+                         </svg>
+
+                        </a>
+                    </li>
+                    <li class="page-footer__item ">
+                        <a href="#" class="page-footer__link">
+                            <svg class="page-footer__icon" width="30px" height="30px" x="0px" y="0px" viewBox="0 0 10 19" xml:space="preserve">
+                             <use xlink:href="img/icon-sprite.svg#icon-facebook">   </use>
+                         </svg>
+                        </a>
+                    </li>
+                    <li class="page-footer__item ">
+                        <a href="#" class="page-footer__link">
+                            <svg class="page-footer__icon" width="30px" height="30px" x="0px" y="0px" viewBox="0 0 16.1 16" xml:space="preserve">
+                             <use xlink:href="img/icon-sprite.svg#icon-instagram">   </use>
+                         </svg>
+                        </a>
+                    </li>
                 </ul>
             </div>
-            <div >
-                <a href="#" class="page-footer__link">HTML Academy</a>
+            <div class="page-footer__academy">
+                <a href="index.html" class="page-footer__academy-link">HTML Academy </a>
+                <svg class="page-footer__logo-academy" viewBox="0 0 60 60" width="30px" height="40px">
+                    <use xlink:href="img/icon-sprite.svg#logo-academy">   </use>
+                </svg>
             </div>
-        </footer>
-
+        </div>
+    </footer>
     </body>
+<script type="text/javascript" src="js/menu.js"> </script>
+<script src="js/picturefill.min.js"></script>
 </html>
